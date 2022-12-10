@@ -1,0 +1,56 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Edit, FMX.Objects, FMX.Controls.Presentation, FMX.Layouts,
+  FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
+  FMX.ListView;
+
+type
+  TfrmPrincipal = class(TForm)
+    Layout1: TLayout;
+    ToolBar1: TToolBar;
+    Rectangle1: TRectangle;
+    edtNovaTarefa: TEdit;
+    Button1: TButton;
+    lstTarefas: TListView;
+  private
+    { Private declarations }
+    const DATA = 'DATA';
+    procedure AtualizarListaDevice;
+    procedure AdicionarItem(const aNovaTarefa: String);
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.fmx}
+
+uses
+  SharedPreference,
+  JSON;
+
+procedure TfrmPrincipal.AdicionarItem(const aNovaTarefa: String);
+var
+  xItem: TListViewItem;
+begin
+  xItem      :=lstTarefas.Items.Add;
+  xItem.Text := aNovaTarefa;
+
+  Self.AtualizarListaDevice;
+
+end;
+
+procedure TfrmPrincipal.AtualizarListaDevice;
+begin
+
+end;
+
+end.
