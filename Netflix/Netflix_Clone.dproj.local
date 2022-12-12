@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/12/12 19:28:57.205,=C:\Users\jeanc\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/12 19:29:49.980,C:\GIT\FIREMONKEY\Netflix\UfrmPrincipal.fmx=C:\Users\jeanc\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2022/12/12 19:29:49.980,C:\GIT\FIREMONKEY\Netflix\UfrmPrincipal.pas=C:\Users\jeanc\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/12 19:30:10.132,C:\GIT\FIREMONKEY\Netflix\Netflix_Clone.dproj=C:\Users\jeanc\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

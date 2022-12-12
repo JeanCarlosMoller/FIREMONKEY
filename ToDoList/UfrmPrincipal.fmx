@@ -24,13 +24,16 @@ object frmPrincipal: TfrmPrincipal
       ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
       HeaderAppearanceClassName = 'TListHeaderObjects'
       FooterAppearanceClassName = 'TListHeaderObjects'
+      ItemIndex = 0
       Align = Client
       Size.Width = 383.000000000000000000
       Size.Height = 422.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
+      ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
       StyleLookup = 'listviewstyle'
       OnDeleteItem = lstTarefasDeleteItem
+      DeleteButtonText = 'Excluir'
     end
   end
   object ToolBar1: TToolBar
@@ -69,6 +72,34 @@ object frmPrincipal: TfrmPrincipal
         Text = 'Button1'
         OnClick = Button1Click
       end
+    end
+  end
+  object PrototypeBindSource1: TPrototypeBindSource
+    AutoActivate = True
+    AutoPost = False
+    FieldDefs = <
+      item
+        Name = 'ColorsName1'
+        Generator = 'ColorsNames'
+        ReadOnly = False
+      end>
+    ScopeMappings = <>
+    Left = 117
+    Top = 157
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = PrototypeBindSource1
+      FieldName = 'ColorsName1'
+      Control = lstTarefas
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
     end
   end
 end

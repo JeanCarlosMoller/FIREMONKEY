@@ -8,7 +8,8 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Edit, FMX.Objects, FMX.Controls.Presentation, FMX.Layouts,
   FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
-  FMX.ListView;
+  FMX.ListView, Data.Bind.GenData, System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors,
+  Data.Bind.EngExt, Fmx.Bind.DBEngExt, Data.Bind.Components, Data.Bind.ObjectScope;
 
 type
   TfrmPrincipal = class(TForm)
@@ -18,6 +19,9 @@ type
     edtNovaTarefa: TEdit;
     Button1: TButton;
     lstTarefas: TListView;
+    PrototypeBindSource1: TPrototypeBindSource;
+    BindingsList1: TBindingsList;
+    LinkListControlToField1: TLinkListControlToField;
     procedure Button1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure lstTarefasDeleteItem(Sender: TObject; AIndex: Integer);
