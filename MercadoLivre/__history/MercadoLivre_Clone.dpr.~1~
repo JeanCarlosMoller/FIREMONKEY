@@ -1,4 +1,4 @@
-program MercadoLivro_Clone;
+program MercadoLivreDelphi;
 
 uses
   System.StartUpCopy,

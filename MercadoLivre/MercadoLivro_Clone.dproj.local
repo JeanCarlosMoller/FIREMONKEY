@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2022/12/13 20:36:18.122,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/12/13 20:37:16.379,C:\GIT\FIREMONKEY\MercadoLivre\UfrmPrincipal.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/12/13 20:37:16.379,C:\GIT\FIREMONKEY\MercadoLivre\UfrmPrincipal.fmx=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
-    <Transaction>2022/12/13 20:37:36.182,C:\GIT\FIREMONKEY\MercadoLivre\MercadoLivro_Clone.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2022/12/13 20:36:18.000.122,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/13 20:37:16.000.379,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\GIT\FIREMONKEY\MercadoLivre\UfrmPrincipal.fmx</Transaction>
+    <Transaction>2022/12/13 20:37:16.000.379,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\GIT\FIREMONKEY\MercadoLivre\UfrmPrincipal.pas</Transaction>
+    <Transaction>2022/12/13 20:37:36.000.182,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\GIT\FIREMONKEY\MercadoLivre\MercadoLivro_Clone.dproj</Transaction>
   </Transactions>
-  <ActiveMobileDevice>   <NoProfile iOSSimulator="iPhone5"/>
-  </ActiveMobileDevice>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
 </BorlandProject>

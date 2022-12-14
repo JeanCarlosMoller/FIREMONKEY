@@ -2,183 +2,198 @@ object Form1: TForm1
   Left = 460
   Top = 239
   Caption = 'Form1'
-  ClientHeight = 487
-  ClientWidth = 313
+  ClientHeight = 525
+  ClientWidth = 355
   Position = Designed
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   Left = 460
   Top = 239
-  DesignerMasterStyle = 3
+  DesignerMasterStyle = 0
   object VertScrollBox1: TVertScrollBox
     Align = Client
-    Size.Width = 313.000000000000000000
-    Size.Height = 487.000000000000000000
+    Size.Width = 355.000000000000000000
+    Size.Height = 525.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
-    Viewport.Width = 313.000000000000000000
-    Viewport.Height = 487.000000000000000000
+    Viewport.Width = 355.000000000000000000
+    Viewport.Height = 525.000000000000000000
+    object lyt_detalhes: TLayout
+      Position.X = 136.000000000000000000
+      Position.Y = 272.000000000000000000
+      TabOrder = 0
+    end
     object rect_valores: TRectangle
       Align = Top
       Fill.Color = xFFEEDA77
-      Size.Width = 313.000000000000000000
+      Size.Width = 355.000000000000000000
       Size.Height = 353.000000000000000000
       Size.PlatformDefault = False
       Stroke.Kind = None
-      object Label1: TLabel
-        Align = Top
-        StyledSettings = [Family, Style, FontColor]
-        Margins.Top = 40.000000000000000000
-        Position.Y = 40.000000000000000000
-        Size.Width = 313.000000000000000000
-        Size.Height = 23.000000000000000000
-        Size.PlatformDefault = False
-        TextSettings.Font.Size = 20.000000000000000000
-        TextSettings.HorzAlign = Center
-        Text = 'Confirme a sua compra'
-        TabOrder = 0
-      end
       object lytProduto: TLayout
         Align = Top
         Margins.Left = 20.000000000000000000
         Margins.Top = 15.000000000000000000
         Margins.Right = 20.000000000000000000
         Position.X = 20.000000000000000000
-        Position.Y = 78.000000000000000000
-        Size.Width = 273.000000000000000000
+        Position.Y = 72.000000000000000000
+        Size.Width = 315.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 1
+        TabOrder = 2
         object lblTituloProduto: TLabel
           Align = Left
+          StyledSettings = [Style, FontColor]
           Size.Width = 120.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Size = 18.000000000000000000
           Text = 'Produto'
-          TabOrder = 0
+          TabOrder = 1
         end
-        object lblCentavosProduto: TLabel
+        object lblCentavoProduto: TLabel
           Align = Right
           StyledSettings = [Family, Style, FontColor]
           Margins.Bottom = 5.000000000000000000
-          Position.X = 251.000000000000000000
+          Position.X = 293.000000000000000000
           Size.Width = 22.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Size = 16.000000000000000000
           TextSettings.HorzAlign = Trailing
           Text = ',99'
-          TabOrder = 1
-        end
-        object lblReaisProduto: TLabel
-          Align = Right
-          Position.X = 171.000000000000000000
-          Size.Width = 80.000000000000000000
-          Size.Height = 50.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.HorzAlign = Trailing
-          Text = 'R$: 10'
           TabOrder = 2
         end
+        object lblReaisProdutos: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 173.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 18.000000000000000000
+          TextSettings.HorzAlign = Trailing
+          Text = 'R$ 10'
+          TabOrder = 0
+        end
+      end
+      object lblTitulo: TLabel
+        Align = Top
+        StyledSettings = [Family, Style, FontColor]
+        Margins.Top = 40.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 355.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 'Confirme a sua compra'
+        TabOrder = 3
       end
       object lytEnvio: TLayout
         Align = Top
         Margins.Left = 20.000000000000000000
-        Margins.Top = 15.000000000000000000
         Margins.Right = 20.000000000000000000
         Position.X = 20.000000000000000000
-        Position.Y = 143.000000000000000000
-        Size.Width = 273.000000000000000000
+        Position.Y = 122.000000000000000000
+        Size.Width = 315.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 3
+        TabOrder = 0
         object lblTituloEnvio: TLabel
           Align = Left
-          Size.Width = 82.000000000000000000
+          StyledSettings = [Style, FontColor]
+          Size.Width = 120.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Size = 18.000000000000000000
           Text = 'Envio'
-          TabOrder = 0
-        end
-        object lblReaisEnvio: TLabel
-          Align = Right
-          Position.X = 171.000000000000000000
-          Size.Width = 80.000000000000000000
-          Size.Height = 50.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.HorzAlign = Trailing
-          Text = 'R$: 6'
-          TabOrder = 2
+          TabOrder = 1
         end
         object lblCentavosEnvio: TLabel
           Align = Right
           StyledSettings = [Family, Style, FontColor]
           Margins.Bottom = 5.000000000000000000
-          Position.X = 251.000000000000000000
+          Position.X = 293.000000000000000000
           Size.Width = 22.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Size = 16.000000000000000000
           TextSettings.HorzAlign = Trailing
           Text = ',50'
-          TabOrder = 1
+          TabOrder = 2
+        end
+        object lblReaisEnvio: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 173.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 18.000000000000000000
+          TextSettings.HorzAlign = Trailing
+          Text = 'R$ 6'
+          TabOrder = 0
         end
       end
       object lytParcelas: TLayout
         Align = Top
         Margins.Left = 20.000000000000000000
-        Margins.Top = 15.000000000000000000
+        Margins.Top = 10.000000000000000000
         Margins.Right = 20.000000000000000000
         Position.X = 20.000000000000000000
-        Position.Y = 223.000000000000000000
-        Size.Width = 273.000000000000000000
+        Position.Y = 188.000000000000000000
+        Size.Width = 315.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 2
-        object lblTituloParcela: TLabel
+        TabOrder = 1
+        object lblTituloParcelas: TLabel
           Align = Left
-          Size.Width = 113.000000000000000000
+          StyledSettings = [Style, FontColor]
+          Size.Width = 120.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Size = 18.000000000000000000
           Text = 'Voc'#234' pagar'#225
-          TabOrder = 0
+          TabOrder = 1
         end
-        object lblReaisParcelas: TLabel
-          Align = Right
-          Position.X = 128.000000000000000000
-          Size.Width = 123.000000000000000000
-          Size.Height = 50.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.HorzAlign = Trailing
-          Text = '1x   R$: 17'
-          TabOrder = 2
-        end
-        object lblCentavosParcelas: TLabel
+        object Label2: TLabel
           Align = Right
           StyledSettings = [Family, Style, FontColor]
           Margins.Bottom = 5.000000000000000000
-          Position.X = 251.000000000000000000
+          Position.X = 293.000000000000000000
           Size.Width = 22.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Size = 16.000000000000000000
           TextSettings.HorzAlign = Trailing
           Text = ',49'
-          TabOrder = 1
+          TabOrder = 2
+        end
+        object lblReaisParcela: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 173.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 18.000000000000000000
+          TextSettings.HorzAlign = Trailing
+          Text = '1x   R$ 17'
+          TabOrder = 0
         end
       end
-      object Line1: TLine
+      object linhaEnvio: TLine
         Align = Top
-        LineType = Bottom
+        LineType = Diagonal
         Margins.Left = 20.000000000000000000
         Margins.Top = 5.000000000000000000
         Margins.Right = 20.000000000000000000
         Position.X = 20.000000000000000000
-        Position.Y = 198.000000000000000000
-        Size.Width = 273.000000000000000000
-        Size.Height = 10.000000000000000000
+        Position.Y = 177.000000000000000000
+        Size.Width = 315.000000000000000000
+        Size.Height = 1.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = xFF919191
       end

@@ -5,33 +5,41 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
-  FMX.Layouts, FMX.Controls.Presentation, FMX.StdCtrls;
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts, System.Math.Vectors,
+  FMX.Controls3D, FMX.Layers3D;
 
 type
   TForm1 = class(TForm)
-    Z: TVertScrollBox;
+    VertScrollBox1: TVertScrollBox;
+    lyt_detalhes: TLayout;
     rect_valores: TRectangle;
-    Label1: TLabel;
+    lblTitulo: TLabel;
     lytProduto: TLayout;
     lblTituloProduto: TLabel;
+    lblCentavoProduto: TLabel;
+    lblReaisProdutos: TLabel;
     lytEnvio: TLayout;
-    lblCentavosProduto: TLabel;
-    lblReaisProduto: TLabel;
     lblTituloEnvio: TLabel;
-    lblReaisEnvio: TLabel;
     lblCentavosEnvio: TLabel;
+    lblReaisEnvio: TLabel;
     lytParcelas: TLayout;
-    lblTituloParcela: TLabel;
-    lblReaisParcelas: TLabel;
+    lblTituloParcelas: TLabel;
     lblCentavosParcelas: TLabel;
-    Line1: TLine;
-    lyt_botao_compra: TLayout;
+    lblReaisParcela: TLabel;
+    linhaEnvio: TLine;
+    lyt_botao_comprar: TLayout;
     Rectangle1: TRectangle;
     btn_comprar: TSpeedButton;
+    Layout3D1: TLayout3D;
     lyt_compra_ok: TLayout;
-    imgOk: TImage;
+    Image1: TImage;
     lyt_loading_compra: TLayout;
+    rect_barra: TRectangle;
     rect_fundo: TRectangle;
+    Label1: TLabel;
+    rect_fundo_braco: TRectangle;
+    rect_fundo_branco_bottom: TRectangle;
+    circuloProduto: TCircle;
   private
     { Private declarations }
   public
