@@ -8,14 +8,14 @@ uses
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts, FMX.ListBox, FMX.Ani;
 
 type
-  TForm1 = class(TForm)
-    Image1: TImage;
+  TfrmPrincipal = class(TForm)
+    imgCartaz: TImage;
     Image2: TImage;
     Image3: TImage;
     Image4: TImage;
-    Layout1: TLayout;
+    lytGenero: TLayout;
     Image5: TImage;
-    Label1: TLabel;
+    lblFiltro: TLabel;
     Layout2: TLayout;
     Image6: TImage;
     Label2: TLabel;
@@ -26,24 +26,34 @@ type
     Image9: TImage;
     Label3: TLabel;
     Label4: TLabel;
-    LayoutMenu: TLayout;
+    lytMenu: TLayout;
     LayoutFechar: TLayout;
     Rectangle1: TRectangle;
     Image10: TImage;
     ListBox1: TListBox;
     FloatAnimation1: TFloatAnimation;
+    {$IFDEF MSWINDOWS}
+    procedure MenuClick(Sender: TObject);
+    {$ELSE}
+    procedure MenuTap(Sender : TObject; const Point: TPointF);
+    {$ENDIF}
+    procedure FormCreate(Sender: TObject);
+    procedure FloatAnimation1Finish(Sender: TObject);
+    procedure Image10Click(Sender: TObject);
+    procedure lytGeneroClick(Sender: TObject);
   private
     { Private declarations }
 
     procedure LoadMenu;
     procedure OpenMenu(ind: Boolean);
     procedure SetupMenu(item: TListBoxItem; texto: string);
+
   public
     { Public declarations }
   end;
 
 var
-  Form1: TForm1;
+  frmPrincipal: TfrmPrincipal;
 
 implementation
 
@@ -51,7 +61,34 @@ implementation
 
 { TForm1 }
 
-procedure TForm1.LoadMenu;
+procedure TfrmPrincipal.FloatAnimation1Finish(Sender: TObject);
+begin
+  if lytMenu.Tag = 0 then
+  lytMenu.Visible := False;
+end;
+
+procedure TfrmPrincipal.FormCreate(Sender: TObject);
+begin
+  imgCartaz.Position.X := 0;
+  imgCartaz.Position.Y := 0;
+  imgCartaz.Width      := 676;
+  imgCartaz.Height     := 450;
+
+  Self.LoadMenu;
+  Self.OpenMenu(False);
+end;
+
+procedure TfrmPrincipal.Image10Click(Sender: TObject);
+begin
+    Self.OpenMenu(False);
+end;
+
+procedure TfrmPrincipal.lytGeneroClick(Sender: TObject);
+begin
+  Self.OpenMenu(True);
+end;
+
+procedure TfrmPrincipal.LoadMenu;
 begin
   ListBox1.Items.Clear;
 
@@ -72,7 +109,22 @@ begin
 
 end;
 
-procedure TForm1.OpenMenu(ind: Boolean);
+{$IFDEF MSWINDOWS}
+procedure TfrmPrincipal.MenuClick(Sender: TObject);
+begin
+  lblFiltro.Text := TListBoxItem(Sender).Text;
+  Self.OpenMenu(False);
+end;
+
+{$ELSE}
+procedure TfrmPrincipal.MenuTap(Sender: TObject; const Point: TPointF);
+begin
+  lblFiltro.Text := TListBoxItem(Sender).Text;
+  Self.OpenMenu(False);
+end;
+{$ENDIF}
+
+procedure TfrmPrincipal.OpenMenu(ind: Boolean);
 begin
   //Esconde o item selecionado..
   ListBox1.ItemIndex := 1;
@@ -82,24 +134,50 @@ begin
 
   if ind then
   begin
-    Layout1.Visible := True;
-    Layout2.Tag     := 1;
-    Layout3.AnimateFloat('Opacity', 0, 0.2);
+    lytMenu.Visible := True;
+    lytMenu.Tag     := 1;
+    lytGenero.AnimateFloat('Opacity', 0, 0.2);
     FloatAnimation1.Inverse := False;
 
   end
   else
   begin
-     Layout2.Tag := 0;
-     Layout3.AnimateFloat('Opacity', 1, 0.4);
+     lytMenu.Tag := 0;
+     lytGenero.AnimateFloat('Opacity', 1, 0.4);
      FloatAnimation1.Inverse := False;
   end;
     FloatAnimation1.Start;
 
 end;
 
-procedure TForm1.SetupMenu(item: TListBoxItem; texto: string);
+procedure TfrmPrincipal.SetupMenu(item: TListBoxItem; texto: string);
 begin
+  Item.Text := Texto;
+  Item.StyledSettings := Item.StyledSettings
+    - [TStyledSetting.Size, TStyledSetting.FontColor, TStyledSetting.Other];
+    Item.TextSettings.HorzAlign := TTextAlign.Center;
+    Item.HitTest := True;
+
+    {$IFDEF MSWINDOWS}
+    Item.OnClick := Self.MenuClick;
+    {$ELSE}
+    Item.OnTap := Self.MenuTap;
+    {$ENDIF}
+
+    if ListBox1.Items.Count > 0 then
+    begin
+      Item.FontColor := $FFC3C3C3;
+      Item.Font.Size := 20;
+      Item.Height    := 80;
+    end
+    else
+    begin
+      Item.FontColor := $FFFFFFFF;
+      Item.Font.Size := 25;
+      Item.Height    := 110;
+    end;
+
+    ListBox1.AddObject(Item);
 
 end;
 
