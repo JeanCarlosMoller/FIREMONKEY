@@ -12,7 +12,6 @@ type
   TForm1 = class(TForm)
     VertScrollBox1: TVertScrollBox;
     lyt_detalhes: TLayout;
-    rect_valores: TRectangle;
     lblTitulo: TLabel;
     lytProduto: TLayout;
     lblTituloProduto: TLabel;
@@ -40,8 +39,22 @@ type
     rect_fundo_braco: TRectangle;
     rect_fundo_branco_bottom: TRectangle;
     circuloProduto: TCircle;
+    lblEndereco: TLabel;
+    lblComplemento: TLabel;
+    linhaProduto: TLine;
+    circuloEndereco: TCircle;
+    lblProduto: TLabel;
+    lblQuantidade: TLabel;
+    lblComprador: TLabel;
+    procedure btn_comprarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+
   private
     { Private declarations }
+    FLoop : String;
+
+    procedure LoadingComprar(aInd: Boolean);
+    procedure Compra_WS;
   public
     { Public declarations }
   end;
@@ -52,5 +65,95 @@ var
 implementation
 
 {$R *.fmx}
+
+{ TForm1 }
+
+procedure TForm1.btn_comprarClick(Sender: TObject);
+begin
+  Self.LoadingComprar(True);
+  rect_barra.Margins.Right := rect_fundo.Width;
+  FLoop := 'S';
+
+  Self.Compra_WS;
+
+  TThread.CreateAnonymousThread(procedure
+  begin
+    while FLoop = 'S' do
+    begin
+      if rect_barra.Margins.Right <= 0 then
+      rect_barra.Margins.Right := rect_fundo.Width;
+
+      Sleep(150);
+      TThread.Synchronize(nil, procedure
+      begin
+      rect_barra.Margins.Right := rect_barra.Margins.Right - 1;
+      end);
+    end;
+
+    //Finalizou com erro...
+    if FLoop = 'ERRO' then
+    begin
+      TThread.Synchronize(nil, procedure
+      begin
+        Self.LoadingComprar(False);
+        ShowMessage('Erro ao finalizar compra');
+      end);
+    end;
+
+    //Finalizou com sucesso...
+    if FLoop = 'OK' then
+    begin
+      TThread.Synchronize(nil, procedure
+      begin
+        lyt_loading_compra.AnimateFloat('Margins.Left', 150, 0.3);
+        lyt_loading_compra.AnimateFloat('Margins.Right', 150, 0.3);
+        lyt_loading_compra.AnimateFloat('Opacity', 0, 0.3);
+     end);
+
+     Sleep(450);
+
+     TThread.Synchronize(nil, procedure
+     begin
+        lyt_compra_ok.Visible   := True;
+        lyt_compra_ok.AnimateFloat('Opacity', 1, 0.4);
+     end);
+
+     Sleep(1000);
+
+     TThread.Synchronize(nil, procedure
+     begin
+       ShowMessage('Compra realizada com sucesso');
+     end);
+    end;
+ end).Start;
+ end;
+
+procedure TForm1.Compra_WS;
+begin
+  TThread.CreateAnonymousThread(procedure
+  begin
+    Sleep(5000);
+    //...
+    //...
+    //...
+    FLoop := 'OK';
+  end).Start;
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  Self.LoadingComprar(False);
+end;
+
+procedure TForm1.LoadingComprar(aInd: Boolean);
+begin
+  rect_fundo_braco.Visible     := aInd;
+  rect_fundo_braco.Visible     := aInd;
+
+  lyt_botao_comprar.Visible   := not aInd;
+  lyt_loading_compra.Visible := aInd;
+  lyt_compra_ok.Visible      := False;
+  lyt_compra_ok.Opacity      := 0;
+end;
 
 end.

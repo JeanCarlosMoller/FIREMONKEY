@@ -1,9 +1,6 @@
 ﻿[lyt_detalhes]
 Coordinates=303,214,84,36
 
-[rect_valores]
-Coordinates=208,214,85,36
-
 [VertScrollBox1]
 Coordinates=98,214,100,36
 
@@ -41,7 +38,7 @@ Coordinates=132,78,110,58
 Coordinates=256,146,60,36
 
 []
-Coordinates=433,221,91,36
+Coordinates=208,214,85,36
 
 [lblReaisParcela]
 Coordinates=10,10,53,58
