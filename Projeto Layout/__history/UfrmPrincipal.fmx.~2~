@@ -1,0 +1,121 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 538
+  ClientWidth = 327
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object FlowLayout1: TFlowLayout
+    Align = Left
+    Margins.Left = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 63.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 475.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Justify = Left
+    JustifyLastLine = Left
+    FlowDirection = LeftToRight
+    object Rectangle2: TRectangle
+      Margins.Top = 10.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+      object Image1: TImage
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0179494441546843ED964B4EC4300C860B3BD80337E01C3C6E038700166C3813
+              12E780359C0016B061B0A98D52D7ADF31CA6953FE99753B58D7FC7E94C3AC771
+              1CC759327B1473D850AC4596977D8AB1DC83D0786DF308CFFBF07B15494AD52D
+              4CCF11E52DB6806D9B674C7F315BA8B5F967D04B3F1C61E6B62A6C6D5EE69FCA
+              37E973AE03DF14356E4138290AC7AD99F4325780D59D6D92DC81965BE78D8460
+              9E2F12E70CEF872479C287A56E4016F88CF62E4B527A3FF98F6CE7587C011A77
+              20D93AA9703B59DB46EA95C4D79FA4A9FBA1D09B89F6A2544901A124DA335203
+              16BF85B4DFD751950D91F963720FDEF9EF02103E079D52B4D8B9025219785EDD
+              3770097AEC87C9A41EEA720F8117A0A77E38E603845B285557A054AE41DA5C96
+              DE417FC80EE0033968DF520CC5F96A7C03E7147338A3984D8D0EE4AE3E5394B3
+              B40327144B289AA3B403A5ABCF64E7D50CC44E56CB3C939577958739C45A8DDA
+              ABCF54CD7B0CC209431D805A730892798F408EE3388EB336BAEE0790C9AB1712
+              5951310000000049454E44AE426082}
+            FileName = 'C:\Users\mysql\Downloads\controle-de-video-game.png'
+          end>
+        Align = Center
+        Size.Width = 68.000000000000000000
+        Size.Height = 54.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object Rectangle3: TRectangle
+      Margins.Top = 10.000000000000000000
+      Position.Y = 140.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Rectangle4: TRectangle
+      Margins.Top = 10.000000000000000000
+      Position.Y = 270.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object FlowLayout8: TFlowLayout
+    Align = Top
+    Size.Width = 327.000000000000000000
+    Size.Height = 63.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Justify = Left
+    JustifyLastLine = Left
+    FlowDirection = LeftToRight
+  end
+  object FlowLayout2: TFlowLayout
+    Align = Right
+    Margins.Left = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 172.000000000000000000
+    Position.Y = 63.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 475.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Justify = Left
+    JustifyLastLine = Left
+    FlowDirection = LeftToRight
+    object Rectangle5: TRectangle
+      Margins.Top = 10.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Rectangle6: TRectangle
+      Margins.Top = 10.000000000000000000
+      Position.Y = 140.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Rectangle7: TRectangle
+      Margins.Top = 10.000000000000000000
+      Position.Y = 270.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+end
