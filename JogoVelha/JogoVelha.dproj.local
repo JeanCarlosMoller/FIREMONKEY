@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2022/12/19 19:06:14.073,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/12/19 19:06:48.433,C:\GIT\FIREMONKEY\JogoVelha\UfrmPrincipal.fmx=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
-    <Transaction>2022/12/19 19:06:48.433,C:\GIT\FIREMONKEY\JogoVelha\UfrmPrincipal.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/12/19 19:06:55.105,C:\GIT\FIREMONKEY\JogoVelha\JogoVelha.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2022/12/19 19:06:14.000.073,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/19 19:06:48.000.433,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\GIT\FIREMONKEY\JogoVelha\UfrmPrincipal.fmx</Transaction>
+    <Transaction>2022/12/19 19:06:48.000.433,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\GIT\FIREMONKEY\JogoVelha\UfrmPrincipal.pas</Transaction>
+    <Transaction>2022/12/19 19:06:55.000.105,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\GIT\FIREMONKEY\JogoVelha\JogoVelha.dproj</Transaction>
+    <Transaction>2022/12/20 18:31:28.139,=C:\GIT\FIREMONKEY\JogoVelha\Unit1.pas</Transaction>
+    <Transaction>2022/12/20 18:31:43.486,C:\GIT\FIREMONKEY\JogoVelha\UJogoVelha.pas=C:\GIT\FIREMONKEY\JogoVelha\Unit1.pas</Transaction>
   </Transactions>
-  <ActiveMobileDevice>   <NoProfile iOSSimulator="iPhone5"/>
-  </ActiveMobileDevice>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
 </BorlandProject>

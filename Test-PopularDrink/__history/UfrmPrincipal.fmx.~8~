@@ -1,0 +1,92 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 332
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 332.000000000000000000
+    Size.Height = 567.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Rectangle1: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Size.Width = 332.000000000000000000
+      Size.Height = 567.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        TextSettings.Font.Family = 'Simplex'
+        Position.X = 30.000000000000000000
+        Position.Y = 50.000000000000000000
+        Margins.Left = 30.000000000000000000
+        Margins.Top = 50.000000000000000000
+        Margins.Right = 30.000000000000000000
+        Size.Width = 272.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label1: TLabel
+          Align = Client
+          StyledSettings = [Style, FontColor]
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 120.000000000000000000
+          Size.Width = 82.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Simplex'
+          TextSettings.Font.Size = 10.000000000000000000
+          Text = 'Search'
+          TabOrder = 0
+        end
+        object Image1: TImage
+          MultiResBitmap.Height = 25
+          MultiResBitmap = <
+            item
+              Width = 32
+              Height = 32
+              PNG = {
+                89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                01D5494441545847ED963D4B1C511440D70F14C1421209D1C28F0452A7B3B010
+                6C05FB340A82954D6214530AA60DE962676DE36FB0B4B0B04865211A50B0F0B3
+                3006A326E73C3730C8CCEABC19D9227BE0E0DE41F6DD79EFBE7BB7D2E0BFA7A9
+                FAF7B1B4E210BEC2E778823F7003AFF0C9E8C56FE8827FF012F7F167353EC715
+                1CC0D299C20BDCC30FE8DB27E9C319DCC65FE8FF94C612DEE2676CF7410D3C9E
+                05BCC6651F14C53777F189103D9E71FC8DF3218AC43377DBDD811866D124DE84
+                28020BCE337F68DBB368C1EFB81AA29C7896567BD1629A448BB23344391846AF
+                D6EB10C5D38D37684D64D25CFD9BC46B66E63B218AE7080F71304419A425F00C
+                8FEF3E16C624DC894CD2123845932803DBB5DF97495A02F6F60EEC0F513C5DF8
+                127743948336B4B7DB5E8BF00EED0526921B078BBDDD2B1983537613D7421481
+                53CD9B606F8F611A9D096F4314C97BF44B6ADEE31446D0E417435410A79AE768
+                6F4F2BD8246EBB6FEEE236B2392C05A79A49D8DB6DAF5EAD24169905E799BB63
+                BEB98B3B494DBC149C6A0E16DFCE450E700BFD5564723EB3E09267EEE2265173
+                A6E4FD4DE8601945DBEB0BB4D33935D7F10CEFE3E25FF0237EF5413DB098AD89
+                4F21AA13EE84C73116A23AE1E23D771F1B34F847A5F2172E0D5B712B79AF8F00
+                00000049454E44AE426082}
+              FileName = 'C:\GIT\FIREMONKEY\Test-PopularDrink\img\search.png'
+            end>
+          Align = Right
+          Margins.Right = 25.000000000000000000
+          Position.X = 222.000000000000000000
+          Size.Width = 25.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object MainMenu1: TMainMenu
+        Left = 104
+        Top = 152
+      end
+    end
+  end
+end

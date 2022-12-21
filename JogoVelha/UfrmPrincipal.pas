@@ -3,9 +3,21 @@ unit UfrmPrincipal;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.TabControl,
-  FMX.Objects, FMX.Layouts, FMX.Effects;
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Dialogs,
+  FMX.TabControl,
+  FMX.Objects,
+  FMX.Layouts,
+  FMX.Effects,
+  UJogoVelha;
 
 type
   TfrmPrincipal = class(TForm)
@@ -98,7 +110,7 @@ begin
   xColuna := StrToInt(Copy(xCoordenadas, 3,1));
 
   FJogoVelha.RealizarJogada(TJogador.tpPlayer1,
-                              xLinha
+                              xLinha,
                               xColuna);
 
   xImagem              := TImage(FindComponent('img_' + xCoordenadas));
@@ -143,7 +155,7 @@ begin
 
   if xJogador = 'morango' then
   begin
-    img_jogador.Bitmap    := img_morango.Bitmap;
+    img_jogador.Bitmap     := img_morango.Bitmap;
     img_computador.Bitmap  := img_banana.Bitmap;
   end
   else //banana
@@ -173,7 +185,7 @@ begin
   begin
     Sleep(450);
 
-    while rect_progresso.Width < reat_fim_jogo.Width do
+    while rect_progresso.Width < rect_fim_jogo.Width do
     begin
       TThread.Synchronize(nil, procedure
       begin
@@ -217,18 +229,18 @@ var
   xImagem: TImage;
 begin
   xLinha  := StrToInt(Copy(aCoordenadas, 1,1));
-  xColuna := StrToInt(Copy(xCoordenadas, 3,1));
+  xColuna := StrToInt(Copy(aCoordenadas, 3,1));
 
   FJogoVelha.RealizarJogada(TJogador.tpCpu,
-                              xLinha
+                              xLinha,
                               xColuna);
 
   xRetangulo := TRectangle(FindComponent('rect_' + aCoordenadas));
 
   if Assigned(xRetangulo) then
   begin
-    xImagem              := TImage(FindComponent('img_' + xCoordenadas));
-    xImagem.Bitmap       := img_jogador.Bitmap;
+    xImagem              := TImage(FindComponent('img_' + aCoordenadas));
+    xImagem.Bitmap       := img_computador.Bitmap;
     xImagem.Visible      := True;
 
     xRetangulo.HitTest   := False;
@@ -237,7 +249,7 @@ end;
 
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  FJogoVelha.DisposeOf;
+  FJogoVelha.DisposeOf; //FreeNill
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
