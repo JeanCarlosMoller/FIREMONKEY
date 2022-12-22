@@ -1,0 +1,60 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.Controls.Presentation, FMX.Edit, FMX.Objects, FMX.Layouts, FMX.StdCtrls,
+  FMX.Menus;
+
+type
+  TForm1 = class(TForm)
+    Layout1: TLayout;
+    Rectangle1: TRectangle;
+    Edit1: TEdit;
+    Image1: TImage;
+    Layout2: TLayout;
+    Image2: TImage;
+    Image3: TImage;
+    FlowLayout1: TFlowLayout;
+    Rectangle2: TRectangle;
+    Rectangle3: TRectangle;
+    Rectangle4: TRectangle;
+    Rectangle5: TRectangle;
+    Rectangle6: TRectangle;
+    Rectangle7: TRectangle;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Rectangle8: TRectangle;
+    Rectangle9: TRectangle;
+    Label4: TLabel;
+    Label5: TLabel;
+    Rectangle10: TRectangle;
+    Label6: TLabel;
+    Label7: TLabel;
+    Rectangle11: TRectangle;
+    Label8: TLabel;
+    Label9: TLabel;
+    Rectangle12: TRectangle;
+    Label10: TLabel;
+    Label11: TLabel;
+    Rectangle13: TRectangle;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+end.
